@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+
+   <body>
+    <button class="btn">Click on here</button>
+      <div class="box">
+        <img id="close-box" src="close.svg" alt="Close icon" width="24" height="24  ">
+        <form>
+          <label for="fName">
+            Your name
+          </label>
+          <input type="text" placeholder="Enter your name" id="fName">
+        </form>
+        <button class="btn btn__inner">Submit your name</button>
+      </div>
+      <script>
+        const btn=document.querySelector('.btn');
+        const box=document.querySelector('.box');
+        btn.addEventListener('click',()=>{
+          box.classList.toggle('active');
+          btn.style.display="none"
+        })
+        const closeBox=document.getElementById('close-box');
+        closeBox.addEventListener('click', ()=>{
+          box.classList.remove('active');
+          btn.style.display="block";
+        });
+        // Submit the data
+        const submit=document.querySelector('.btn__inner');
+        submit.addEventListener('click',()=>{
+          box.classList.remove('active');
+          btn.style.display='block';
+          alert('Your data has successfully submitted.');
+        })
+      </script>
+   </body>
+</html>
