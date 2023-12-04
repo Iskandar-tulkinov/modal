@@ -89,7 +89,7 @@ font-weight:bold;
 color: crimson;
 transition: all 0.3s ease;
 } */
-#close-box{
+#close-box {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -100,32 +100,16 @@ transition: all 0.3s ease;
   background-color: #fff;
   border-radius: 10px;
 }
+
+
+#close-box:hover{
+  opacity: 0.8;
+  background-color: #a89f9fbd;
+}
 .box:hover #close-box path{
   stroke: #fff;
   fill: #fff;
   color: #fff;
-}
- .btn.btn__inner{
-  cursor: pointer;
-  color:#030e1a;
-  text-align: center;
-  font-family: "Noto Sans SC";
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 22px;
-  border-radius: 4px;
-  background: #fff ;
-  padding: 9px 12px;
-  margin: 12px;
-  transition: all .3s ease;
-
-}
-.btn.btn__inner:hover{
-  background-color: #292525;
-  color: #fff;
-}
-.btn:hover .btn.btn__inner{
-  background-color: #409EFF;
 }
 
 form{
@@ -136,7 +120,7 @@ line-height: 22px;
 letter-spacing: 0px;
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
 }
 form label{
@@ -170,8 +154,36 @@ form input:disabled{
 form input::placeholder{
 color:  #C0C4CC;
 }
-@media only screen and (max-width:450px){
-  .box,.btn{
+
+.submit{
+  cursor: pointer;
+  color:crimson;
+  text-align: center;
+  font-family: "Noto Sans SC";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 22px;
+  border-radius: 4px;
+  background: #fff ;
+  padding: 9px 12px;
+  margin: 12px;
+  transition: all .3s ease;
+margin-top: 60px;
+}
+.submit:hover{
+  background-color: #292525;
+  color: #fff;
+}
+.btn:hover .submit{
+  background-color: #409EFF;
+}
+@media only screen and (max-width:550px){
+  .box.active,.btn{
     padding: 23px;
+    margin: inherit auto;
+  }
+  .box.active{
+    background-color: crimson;
+    color: #fff ;
   }
 }

@@ -15,9 +15,9 @@
           <label for="fName">
             Your name
           </label>
-          <input type="text" placeholder="Enter your name" id="fName">
+          <input type="text" placeholder="Enter your name" id="fName" required>
+          <input class="submit" type="submit" name="" id="" value="Submit your name">
         </form>
-        <button class="btn btn__inner">Submit your name</button>
       </div>
       <script>
         const btn=document.querySelector('.btn');
@@ -32,11 +32,14 @@
           btn.style.display="block";
         });
         // Submit the data
-        const submit=document.querySelector('.btn__inner');
+        const submit=document.querySelector('.submit');
         submit.addEventListener('click',()=>{
-          box.classList.remove('active');
+          const checkValue=document.getElementById('fName')
+          if(checkValue.value>0){
+            box.classList.remove('active');
           btn.style.display='block';
-          alert('Your data has successfully submitted.');
+          alert('Your name has successfully submitted.');
+          }
         })
       </script>
    </body>
